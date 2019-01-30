@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300');
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+@import url('https://fonts.googleapis.com/css?family=Dosis');
+  body {
+    font-family: 'Quicksand', sans-serif;
+    /*font-family: 'Comfortaa', cursive;*/ 
+    /* font-family: 'Dosis', sans-serif;*/
+    font-size: 14px;
+    line-height: 2.5em;
+  }
+  .canvas-body {
+    position: relative;
+    padding: 1%;
+    margin: 50px auto;
+    width: 90%;
+    height: 600px;
+    border: 1px solid rgb(184, 184, 184);
+  }
+  .canvas-wrapper{
+    width:45%;
+    height: 94%;
+    float: left;
+    margin: 20px 1.5%;
+    position: relative;
+  }
+  .floatingBalls {
+      position: absolute;
+      top: 0;
+      margin: 10px 53px 53px 10px;
+  }
+  .gameBox {
+    position: absolute;
+    top: 0;
+    margin: 5%;
+    width: 90%;
+    height: 90%;
+}
+  .canvas, .game-canvas {
+    background: rgb(240, 240, 240);
+    width:100%;
+    height: 100%;
+  }
+  .divider {
+    height: 100%;
+    border-right: 1px solid rgb(184, 184, 184);
+    float: left;
+    width: 2%;
+  }
+  .qBallBox {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+  }
+  
+  .qBallOut, .qBallIn {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  opacity: 1;
+  position: absolute;
+  /* box-shadow: 0px 0px 5px 5px ; */
+  top: 0;
+  left: 0;
+  /* -webkit-animation: qb-bounce 1.0s infinite ease-in-out;
+  animation: qb-bounce 1.0s infinite ease-in-out; */
+}
+
+  #qBallBox > .qBallOut {
+    -webkit-animation: qb-bounce 1.0s infinite ease-in-out;
+    animation: qb-bounce 1.0s infinite ease-in-out;
+    /*box-shadow: 0px 0px 5px 5px ;*/
+  }
+
+  #qBallBox > .qBallIn {
+    width: 70%;
+    height: 70%;
+    top: 15%;
+    left: 15%;
+  }
+
+  #qBallBox {
+    width: 70px;
+    height: 70px;
+    margin-left: 110px;
+    margin-top: 10px;
+  }
+  
+  .qBallIn {
+  width: 80%;
+  height: 80%;
+  -webkit-animation-delay: -0.5s;
+  animation-delay: -0.5s;
+  -webkit-animation: unset;
+  animation: unset;
+  top: 10%;
+  left: 10%;
+  /* box-shadow: 0px 0px 2px 2px; */
+}
+.qBallInFound {
+  cursor: pointer;
+}
+  
+  @-webkit-keyframes qb-bounce {
+    0%, 100% { -webkit-transform: scale(0.0) }
+    50% { -webkit-transform: scale(1.0) }
+  }
+  
+  @keyframes qb-bounce {
+    0%, 100% { 
+      transform: scale(0.0);
+      -webkit-transform: scale(0.0);
+    } 50% { 
+      transform: scale(1.0);
+      -webkit-transform: scale(1.0);
+    }
+  }
+  .midGameBox {
+    border-bottom: 1px dotted #b8b8b8;
+  }
+  .topGameDiv, .topGameDivR {
+    font-size: 1.3em;
+    width: 65%;
+    float: left;
+  }
+  .topGameDivR{
+    width: 35%;
+  }
+  .topGameDivB{
+    font-size: 1em;
+    width: 100%;
+    float: left;
+    text-align: center;
+    margin-top: 10px;
+    padding-top: 5px;
+    color: rgb(8, 25, 73);
+    font-weight: 600;
+    border-top: 1px dotted #b8b8b8;
+    line-height: 1.8em;
+    border-bottom: 1px dotted #b8b8b8;
+    padding-bottom: 5px;
+  }
+
+  .title{
+    color: black;
+    font-size: 1em;
+    text-decoration: underline;
+  }
+  .pop, .popin{
+    float: left;
+    font-size: 2em;
+    font-weight: 600;
+  }
+  .popin{
+    margin-left: 150px;
+  }
+  .popball {
+    border: 1px solid #000;
+    border-radius: 30px;
+    margin-left: 115px;
+    margin-top: 15px;
+  }
+  .timer {
+    font-size: 4em;
+    float: left;
+    font-weight: 600;
+    line-height: 0;
+    color: rgb(255, 0, 0);
+  }
+  .midGameDivL {
+    width: 58%;
+    float: left;
+    padding: 4%;
+    padding-right: 0px;
+  }
+  .midGameDivR {
+    width: 32%;
+    float: left;
+    padding: 2.3%;
+    padding-left: 0px;
+  }
+  .downGameDiv{
+    width: 40%;
+    height: 100%;
+    padding: 20px 30%;
+  }
+  .playButton, .resetButton{
+    float: left;
+    min-width: 7em;
+    font-size: 1.3em;
+    font-weight: 600;
+    padding: 0.2em;
+    text-align: center;
+    margin: 10px 20%;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  .playButton{border: 1px solid rgb(7, 129, 48);} .resetButton{border: 1px solid rgb(194, 15, 15);}
+  .reset{
+    font-weight: 500;
+    color: #901e1d;
+    margin-right: 60px;
+    margin-left: 72.5%;
+    border: 1px solid;
+    padding: 5px;
+    cursor: pointer;
+  }
+  .resetGameDiv{
+    margin-top: -30px;
+    margin-right: -19%;
+    margin-bottom: 10px;
+  }
+  
